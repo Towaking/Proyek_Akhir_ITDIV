@@ -70,6 +70,7 @@ export function LandingCaraosel(detail: PopulerView) {
                 <div className="Landing_Caraosel_title">{detail.title}</div>
                 <div className="Landing_Caraosel_desc">{detail.description}</div>
                 <div className="Landing_Caraosel_rating">
+                   
                    {rating(detail.rating)}
                    <div>{detail.rating}/10</div>
                    </div>

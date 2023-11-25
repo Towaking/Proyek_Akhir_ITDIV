@@ -16,8 +16,7 @@ export function Landing() {
       setTimeout(() => {
         
         onChangeAttributes((checkValue+1)%3);
-       
-      }, 8000);
+      }, 5000);
     })
 
   const detail = 
@@ -41,13 +40,15 @@ export function Landing() {
       rating: 8.5,
     }
   ]
-  function details(num : number){
-    return detail[num];
-  }
-
+ 
   const onChangeAttributes = (value:any) => {
     
+    if(value < 0){
+      setCheckValue(2);
+    }
+    else{
       setCheckValue(value);
+    }
     
   }
   const promoList = 
@@ -115,14 +116,14 @@ export function Landing() {
             <span>POPULAR MOVIE THIS WEEK</span>
           </div>
           <div className="landing_main_populer_caraosel">
-            <img src="images/left arrow.png" alt="arrow" onClick={()=> onChangeAttributes((checkValue-1)%3)}/>
+            <img src="images/left arrow.png" alt="arrow" draggable="false"   onClick={()=> onChangeAttributes((checkValue-1)%3)}/>
               <LandingCaraosel 
               title={detail[checkValue].title}
               description = {detail[checkValue].description}
               image= {detail[checkValue].image}
               rating={detail[checkValue].rating}
               />
-            <img src="images/right arrow.png" alt="arrow" onClick={()=> onChangeAttributes((checkValue+1)%3)}/>
+            <img src="images/right arrow.png" alt="arrow" draggable="false" onClick={()=> onChangeAttributes((checkValue+1)%3)}/>
           </div>
           <div className="landing_main_populer_caraosel_select">
             <input type="radio"  name="" id="0" checked = {checkValue === 0} onChange={()=>onChangeAttributes(0)}/>
