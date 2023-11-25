@@ -1,38 +1,424 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+body{
+  background-color: rgb(31, 51, 51);
+}
+/* NAVBAR */
+.navbar{
+  width: 100%;
+  z-index: 10;
+  height: auto;
+  position: fixed;
+  padding: 10px 50px;
+  background-color: hsl(0, 0%, 0%, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.navbar_logo img{
+  width: 50px;
+  height: 50px;
+}
+
+.navbar_feature{
+  display: flex;
+  width: 40rem;
+  align-items: center;  
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.navbar_search{
+  display: flex;
+  align-items: center;
+  border: #fff;
+  padding: 5px 30px;
+  width: 100%;
+  border: 1px #fff solid;
+  border-radius: 50px;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar_search input{
+  outline: none;
+  background-color: inherit;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  width: 100%;
+}
+
+.navbar_search input::placeholder{
+  color: #fff;
+}
+
+.navbar_search img{
+  height: 15px;
+  cursor: pointer;
+  object-fit: contain;
+}
+
+.navbar_location{
+  display: flex;
+  gap: 7px;
+}
+.navbar_location select{
+  font-size: 18px;
+  outline: none;
+  color: #fff;
+  border: none;
+  background-color: inherit;
+}
+
+.navbar_location select option{
+  font-size: 18px;
   text-align: center;
+  color: black;
+  padding: 10px;
+  background-color: hsl(0, 0%, 0%, 0.4) inherit;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar_sign_in{
+  display: flex;
+  text-align: center;
+  width: 14rem;
+}
+.navbar_sign_in button{
+  font-size: 18px;
+  color: #ffF;
+  cursor: pointer;
+  background-color: #ff0000;
+  border-radius: 3rem;
+  text-align: center;
+  width: 100%;
+  padding: 5px 25px;
+  outline: none;
+  border: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* NAVBAR */
+
+/* MAIN */
+
+/* DIBAGI PER PAGE CSS NYA USAHAKAN TIDAK ADA YANG SAMA CLASS NYA */
+/* Contoh  */
+
+  /* SECTION */
+
+
+  /* SECTION */
+
+/* Contoh */
+
+/* Hero */
+  .hero{
+    width: 100%;
+    height: 90vh;
+    background-image: url(../public/images/hero.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
+  .hero_main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* background-color: #ffffff05;
+    backdrop-filter: blur(10px); */
+    gap: 5rem;
+    color: #fff;
+  }
+  .hero_title{
+    font-size: 40px;
+  }
+  .hero_desc{
+    width: 40rem;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .hero_button button{
+    cursor: pointer;
+    padding: 20px 100px;
+    font-size: 18px;
+    background-color: transparent;
+    color: #fff;
+    border: 3px #fff solid;
+    border-radius: 50px;
+  }
+
+/* Hero */
+
+/* Landing */
+
+.landing_main{
+  color: #fff;
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #672B44;
+  gap: 80px;
+}
+.landing_main_populer{
+  color: #fff;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.landing_main_populer_title{
+  font-size: 30px;
+}
+
+.landing_main_populer_caraosel{
+  display: flex;
+}
+.landing_main_populer_caraosel img{
+
+  object-fit: contain;
+}
+
+.landing_main_promotions{
+  display: flex;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.landing_main_promotions_offer{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 150px;
+}
+.LandingButton{
+  padding: 10px 30px;
+  cursor: pointer;
+  width: 15rem;
+  background-color: transparent;
+  border: 2px #fff solid;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  color: 18px;
+}
+
+/* Landing */
+
+/* LandingCaraosel */
+.Landing_Caraosel{
+  display: flex;
+  justify-content: center;
+}
+.Landing_Caraosel_data{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
+  gap: 20px;
+}
+.Landing_Caraosel_title{
+  height: 3rem;
+  font-size: 30px;
+}
+.Landing_Caraosel_desc{
+  height: 14rem;
+  font-size: 18px;
+}
+.Landing_Caraosel_rating{
+  width: 10rem;
+  display: flex;
+  gap: 20px;
+}
+
+#zerostar{
+  width: 20px;
+  filter: invert(1);
+  object-fit: cover;
+  object-position: left;
+}
+#onestar{
+  width: 20px;
+  object-fit: cover;
+  object-position: left;
+}
+#twostar{
+  width: 40px;
+  object-fit: cover;
+  object-position: left;
+}
+#threestar{
+  width: 65px;
+  object-fit: cover;
+  object-position: left;
+}
+#fourstar{
+  width: 84px;
+  object-fit: cover;
+  object-position: left;
+}
+#fivestar{
+  width: 106px;
+  object-fit: cover;
+  object-position: left;
+}
+
+#zerohalfstar{
+  width: 10px;
+  object-fit: cover;
+  object-position: left;
+}
+#onehalfstar{
+  width: 32px;
+  object-fit: cover;
+  object-position: left;
+}
+#twohalfstar{
+  width: 54px;
+  object-fit: cover;
+  object-position: left;
+}
+#threehalfstar{
+  width: 75px;
+  object-fit: cover;
+  object-position: left;
+}
+#fourhalfstar{
+  width: 96px;
+  object-fit: cover;
+  object-position: left;
+}
+
+
+
+
+/* LandingCaraosel */
+
+/* Sponsor */
+
+.sponsor {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 30px;
+  background-color: #fff;
+  gap: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.sponsor_logo{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sponsor_title span{
+  font-size: 40px;
 }
+.sponsor_logo img{
+  width: 12rem;
+  object-fit: contain;
+}
+
+.sponsor_logo_top{
+  display: flex;
+   gap: 6rem;
+}
+.sponsor_logo_bot{
+  display: flex;
+  gap: 4rem;
+}
+
+/* Sponsor */
+
+/* MAIN */
+
+
+
+/* FOOTER */
+  .footer{
+    width: 100%;
+    /* position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+    font-size: 18px;
+  }
+  .footer_main{
+    background-color: #672B44;
+    padding: 30px 50px;
+    display: flex;
+    width: 100%;
+    gap: 13rem;
+  }
+  
+  .footer_logo_desc{
+    display: flex;
+    gap: 20px;
+    color: #fff; 
+  }
+  
+  .footer_logo_desc span{
+    width: 13.5rem;
+  }
+  
+  .footer_logo_desc img{
+    object-fit: contain;
+    height: 60px;
+  }  
+  .footer_shortcut{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+  }
+  .footer_shortcut a{
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .footer_contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    color: #fff;
+    width: 24rem;
+    text-align: start;
+  }
+
+  .footer_contact_img{
+    display: flex;
+    align-items: center;
+  }
+
+  .footer_copyright{
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    background-color: #390C1F;
+  }
+
+/* FOOTER */
