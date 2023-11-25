@@ -1,3 +1,4 @@
+
 import React from "react";
 
 export function Navbar() {
@@ -32,3 +33,4 @@ export function Navbar() {
     </nav>
   );
 }
+
