@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Link } from 'react-router-dom';
 
 export function Navbar() {
   const logo = "images/CinemateLogo.png";
@@ -8,9 +9,11 @@ export function Navbar() {
 
   return (
     <nav className="navbar">
-        <div className="navbar_logo">
-          <img src={logo} alt="image" />
-        </div>
+        <Link to="/">
+          <div className="navbar_logo">
+            <img src={logo} alt="image" />
+          </div>
+        </Link>
         <div className="navbar_feature">
             <div className="navbar_search">
                 <input type="text" name="" placeholder="Search Movies"/>
@@ -26,9 +29,11 @@ export function Navbar() {
                     <option value="">LOL</option>
                 </select>
             </div>
-            <div className="navbar_sign_in">
-                <button>Sign in</button>
-            </div>
+            <Link to="/signin">
+              <div className="navbar_sign_in">
+                  <button>Sign in</button>
+              </div>
+            </Link>
         </div>
     </nav>
   );
