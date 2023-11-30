@@ -1,6 +1,6 @@
 
 import React from "react";
-
+import { Link } from 'react-router-dom';
 export function Footer() {
 
   const logo = "/images/CinemateLogo.png";
@@ -19,7 +19,9 @@ export function Footer() {
         </div>
         <div className="footer_shortcut">
             <a href="#">POPULAR MOVIES</a>
-            <a href="#">PROMOTIONS</a>
+            <Link to="/Promotion">
+              <a href="#">PROMOTIONS</a>
+            </Link>
             <a href="#">ABOUT US</a>
         </div>
         <div className="footer_contact">

@@ -1,15 +1,11 @@
 import React from 'react';
 import './App.css';
-import { Landing } from './Pages/Landing';
+import Route from './Routes/AppRouter';
 
-
-
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <Landing/>
-    </div>
+    <Route />
   );
-}
+};
 
-export default App;
+export default App;

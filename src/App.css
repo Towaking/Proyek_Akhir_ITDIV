@@ -31,15 +31,15 @@
 
 .navbar_feature{
   display: flex;
-  width: 40rem;
+  width: 60rem;
   align-items: center;  
   justify-content: space-between;
-  gap: 30px;
+  gap: 60px;
 }
 
 .navbar_search{
   display: flex;
-  align-items: center;
+  align-items: center;  
   border: #fff;
   padding: 5px 30px;
   width: 100%;
@@ -94,6 +94,8 @@
   display: flex;
   text-align: center;
   width: 14rem;
+  margin-top: -5px;
+  margin-bottom: 15px;
 }
 .navbar_sign_in button{
   font-size: 18px;
@@ -427,3 +429,376 @@
   }
 
 /* FOOTER */
+
+/* SIGNIN */
+.signIn-container {
+  background-image: url('../public/images/hero.png');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-form {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  width: 21%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+input {
+  margin: 5px 0;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #5f5c5c;
+  border-radius: 8px;
+  border-color: #5f5c5c;
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
+  background-color: rgb(255, 55, 0); 
+  color: white; 
+  border: none;
+  border-radius: 4px;
+  margin-top: 20px; 
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+.login-form p {
+  margin-top: 10px;
+  text-align: center;
+  color:#5f5c5c; 
+}
+
+.login-form p span {
+  color: white; 
+  cursor: pointer;
+}
+.movie-container {
+  background-image: url('../public/images/oppenheimerbg.png');
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+  align-content: flex-end;
+  padding-right: 200px;
+  padding-top: 200px;
+}
+
+.movie-container p {
+  margin-right: 20px;
+  color: white;
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+.movie-container h1{
+  font-size: 30px;
+}
+
+.category {
+  display: flex;
+  padding-top: 40px;
+}
+
+.category-item {
+  flex: 1;
+  border: 1px solid #fff;
+  padding: 3px 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.score {
+  display: flex;
+  padding-top: 40px; ;
+}
+
+.score-item {
+  padding: 10px;
+  font-size: 18px;
+}
+
+.desc {
+  font-size: 18px;
+  text-align: right;
+}
+
+.view-button {
+  cursor: pointer;
+  padding: 20px 120px;
+  font-size: 18px;
+  background-color: transparent;
+  color: #fff;
+  border: 1px #fff solid;
+  border-radius: 40px;
+  margin-bottom: 60px;
+
+}
+
+
+.now-showing{
+  background: linear-gradient(to bottom, hsl(335, 41%, 29%),hsla(334, 59%, 12%) );
+  background-size: cover;
+  text-align: center;
+  color: white;
+  padding-top: 30px;
+}
+
+.detail-container {
+  background-image: url('../public/images/Movie.png');
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: row; /* Change direction to row for horizontal alignment */
+  align-items: flex-start; /* Align items to the start (top) */
+  align-content: flex-start;
+  padding-left: 20px; /* Adjusted padding for the left side */
+  padding-top: 20px;
+  
+}
+
+.detail-image{
+  padding-top: 80px;
+  margin-right: 20px;
+}
+.details-container{
+  padding-top: 120px;
+  order: 2;
+
+  
+}
+.desc-details{
+  text-align: left;
+  font-size: 18px;
+}
+.category-details{
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+.cast-images {
+  text-align: center;
+  background:linear-gradient(to bottom, hsl(335, 41%, 29%),hsla(334, 59%, 12%) );
+}
+
+.cast-images h1{
+  color: white;
+  text-align: left;
+  padding-left: 150px;
+  padding-top: 100px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  justify-content: center;
+  padding-left: 150px;
+  padding-top: 50px;
+}
+
+.cast-item {
+  display: flex;
+  align-items: center;
+}
+
+.cast-item img {
+  width: 15%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.text {
+  margin-left: 10px; /* Add margin to the left of the text */
+  color: white;
+  font-size: 18px;
+}
+.image-container {
+  text-align: center;
+}
+
+.photos {
+  display: flex;
+  justify-content: space-evenly; /* Adjust as needed, or use other values like space-around, space-evenly, etc. */
+  margin-top: 20px; /* Add margin to the top of the photos container */
+}
+
+.photos img {
+  margin-right: 10px; /* Add margin between each image (adjust as needed) */
+}
+.buy-ticket-button {
+  font-size: 18px;
+  color: #ffF;
+  cursor: pointer;
+  background-color: #ff0000;
+  border-radius: 3rem;
+  text-align: center;
+  width: 20%;
+  padding: 5px 25px;
+  outline: none;
+  border: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.promotion-container{
+  background:linear-gradient(to bottom, hsl(335, 41%, 29%),hsla(334, 59%, 12%) );
+  color: white;
+  text-align: start;
+  padding: 30px;
+}
+.promotion-container h1{
+  font-size: 60px;
+  padding-left: 100px;
+  padding-top: 100px;
+}
+
+.promo {
+  display: flex;
+  flex-direction: column; /* Align items in a column */
+  gap: 20px; /* Adjust the gap between promo items */
+  padding-left: 100px;
+  padding-top: 50px;
+}
+
+.img-promo {
+  display: flex;
+  align-items: center;
+  gap: 50px; /* Adjust the gap between image and text */
+  padding-top: 100px;
+}
+
+
+.img-promo img {
+  width: 400px; /* Adjust image width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.text-promo {
+  max-width: 700px; /* Adjust the maximum width of the text */
+  text-align: left; /* Align text to the left */
+}
+
+
+/* BookTicket */
+
+.bookticket{
+  background:linear-gradient(to bottom, hsl(335, 41%, 29%),hsla(334, 59%, 12%) );
+  height: 100%;
+  color: white;
+}
+
+.book_upper_detail{
+  display: flex;
+  gap: 20px;
+  /* justify-content: space-between; */
+  align-content: center;
+  padding: 50px 100px;
+}
+.book_detail{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.book_details_genre, .book_details_cinema{
+  display: flex;
+  gap: 10px;
+}
+
+.book_schedule{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.book_schedule_cinema{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.book_seat{
+  display: grid;
+  grid-template-columns: repeat(19, 0.2fr);
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.book_lower_detail{
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 100px;
+}
+
+.seatbox{
+  color: #ffF;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 2px 8px;
+  width: 40px;
+  height: 30px;
+  user-select: none;
+}
+.hide{
+  display: hidden;
+  opacity: 0;
+  user-select: none;
+}
+.book_screen{
+  width: 100%;
+  height: 50px;
+  background-color: #D9D9D9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+.book_aside{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book_notes{
+  display: flex;
+  gap: 30px;
+}
+
+.book_taken, .book_available{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.book_taken > div{
+  width: 50px;
+  height: 50px;
+  background-color: #CDCDCD;
+}
+
+.book_available > div{
+  width: 50px;
+  height: 50px;
+  background-color: #36A5F6;
+}
+
+.book_positions{
+  display: flex;
+  gap: 10px;
+}
