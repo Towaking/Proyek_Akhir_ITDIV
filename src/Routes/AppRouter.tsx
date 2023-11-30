@@ -6,6 +6,8 @@ import SignUp from '../Pages/SingUp';
 import ViewMovies from '../Pages/ViewMovies';
 import Details from '../Pages/Details';
 import Promotion from '../Pages/Promotion';
+import BookTicket from '../Pages/BookTicket';
+
 
 const AppRouter: React.FC = () => {
   return (
@@ -17,6 +19,7 @@ const AppRouter: React.FC = () => {
         <Route path="/viewmovies" element={<ViewMovies/>} />
         <Route path="/details" element={<Details/>} />
         <Route path="/promotion" element={<Promotion/>} />
+        <Route path="/book" element={ <BookTicket /> }/>
       </Routes>
     </BrowserRouter>
   );

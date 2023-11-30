@@ -1,9 +1,16 @@
 import React from 'react';
 import { Navbar } from '../component/Navbar/Navbar';
 import { Footer } from '../component/Footer/Footer';
+import { Navigate, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 export function Details() {
+    const Navigate = useNavigate();
+    const redirect = () => {
+      Navigate('/book');
+    }
+
     return (
       <div>
         <Navbar />
@@ -25,7 +32,9 @@ export function Details() {
             <div className='score'>
                 <div className='score-item'><img src="/images/Rating.png" alt="" /></div>
                 <div className='score-item'>Score (8,7/10)</div>
-                <button className='buy-ticket-button'>Buy Ticket</button>
+                <Link to="/book" style ={{width: 700}}>
+                  <button className='buy-ticket-button' onClick={redirect}>Buy Ticket</button>
+                </Link>
             </div>
             
         </div>

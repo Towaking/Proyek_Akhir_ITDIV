@@ -15,7 +15,7 @@ export function Landing() {
     useEffect(()=>{
       setTimeout(() => {
         
-        onChangeAttributes((checkValue+1)%3);
+        onChangeAttributes(()=>(checkValue+1)%3);
       }, 5000);
     })
 
