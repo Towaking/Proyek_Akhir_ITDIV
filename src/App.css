@@ -701,7 +701,7 @@ padding-bottom: 20px;
 .book_upper_detail{
   display: flex;
   gap: 20px;
-  /* justify-content: space-between; */
+  
   align-content: center;
   padding: 50px 100px;
 }
@@ -802,3 +802,410 @@ padding-bottom: 20px;
   display: flex;
   gap: 10px;
 }
+
+.book_payment{
+  display: flex;
+  justify-content: end;
+}
+
+.book_payment button{
+  padding: 10px 20px;
+}
+
+/* BookTicket */
+
+
+
+/* Transaction */
+
+.Transaction{
+  background:linear-gradient(to bottom, hsl(335, 41%, 29%),hsla(334, 59%, 12%) );
+  color: white;
+}
+
+.Transaction_Container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 50px;
+}
+
+.transaction_summary{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.transaction_title{
+  padding: 0 100px;
+}
+
+#spider_trans{
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.transaction_summary > div:not(.book_upper_details) {
+  padding: 0 100px;
+}
+
+.transaction_detail{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transaction_detail_left{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 15px;
+}
+.transaction_detail_right{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 10px;
+}
+
+.transaction_promotions{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  gap: 10px;
+}
+
+.transaction_total{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transaction_total span{
+  display: flex;
+  text-align: center;
+}
+
+.transaction_total img{
+  object-fit: contain;
+  height: 22px;
+}
+
+.transaction_payment{
+  display: flex;
+  justify-content: end;
+}
+.transaction_payment button{
+  padding: 10px 20px;
+}
+
+/* Transaction */
+
+/* SUccess */
+
+.Success{
+  background:linear-gradient(to bottom, hsl(335, 41%, 29%),hsla(334, 59%, 12%) );
+  color: white;
+}
+
+.Success_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 200px 100px;
+}
+
+.Success_detail{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 80%;
+}
+
+.Success_shown{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.Success_shown img{
+  width: 100px;
+  object-fit: contain;
+}
+
+.Success_shown span{
+  font-size: 60px;
+}
+
+.Success_summary{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.Success_button{
+  display: flex;
+  justify-content: end;
+}
+.Success_button button{
+  padding: 10px 20px;
+}
+
+/* Success */
+
+
+
+/* MyProfile */
+
+.MyProfile{
+  width: 400px;
+  padding: 40px 30px;
+  border-radius: 20px;
+  background-color: #000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.Profile_identity{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Profile_identity img{
+  width: 40px;
+  object-fit: contain;
+} 
+
+.Profile_myTicket{
+    color: #fff;
+    text-decoration: none;
+}
+
+.Profile_email, .Profile_phone{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Profile_email span, .Profile_phone span{
+  display: flex;
+  gap: 10px;
+}
+.Profile_edit{
+  display: flex;
+  justify-content: space-between;
+}
+
+.Profile_editable{
+  background-color: white;
+  color: #000;
+  padding: 0 20px;
+}
+
+
+
+/* MyProfile */
+
+
+/* MyTickets */
+
+.MyTickets{
+  background:linear-gradient(to bottom, hsl(335, 41%, 29%),hsla(334, 59%, 12%) );
+  color: white;
+
+}
+
+.MyTicket_Container{
+  width: 80%;
+}
+.MyTicket_detail{
+  padding: 100px 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.MyTicket_History{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.MyTicket_HistoryTag{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 35rem;
+  border-radius: 20px;
+  animation-timing-function: ease-in;
+  animation-delay: 500ms;
+  background-color: #3D1717;
+}
+
+
+.MyTicket_HistoryTag span{
+  width: 50%;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.MyTicket_Tags{
+  background: linear-gradient(to right, #FF0000, #FFC482);
+  border-radius: 50px;
+}
+
+.MyTicket_Active{
+
+  background-color: #672B44;
+  border-radius: 20px;
+}
+
+.MyTicket_Upper{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 30px;
+}
+
+.MyTicket_Up_Title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.MyTicket_Low_Title{
+  
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.MyTicket_Low_Date{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-right: 10px;
+  border-right: 1px solid hsl(0, 0%, 100%,0.5);
+}
+
+.MyTicket_Low_Places{
+  display: flex;
+  padding: 0 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+#MyTicket_code{
+  color: hsl(0, 0%, 0%,0.5);
+}
+
+#MyTicket_desc{
+  color: #000;
+}
+
+.MyTicket_Low_Time{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+  align-items: start;
+  border-left: 1px solid hsl(0, 0%, 100%,0.5);
+}
+
+.MyTicket_Low_Head{
+  color: hsl(0, 0%, 100%,0.5);
+}
+
+.MyTicket_Lower{
+  padding: 20px 20px 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: linear-gradient(to right, #FFC482,#FFE2C1);
+}
+.MyTicket_Lower_Detail{
+  display: flex;
+  gap: 25px;
+}
+
+.MyTicket_Lower_Book , .MyTicket_Lower_Time{
+  display: flex;
+  flex-direction: column;
+}
+
+.half_circle{
+  height: 10px; 
+  border-top-left-radius: 21px;  
+  border-top-right-radius: 21px; 
+  width: 20px;
+  background-color: #332828;
+}
+.MyTicket_Lower_Gerigi{
+  padding-top: 30px;
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+
+
+
+/* MyTickets */
+
+
+/* AllTransaction */
+
+.AllTransaction{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px;
+}
+
+
+
+.lines{
+  width: 70vw;
+  height: 2px;
+  background-color: #fff;
+}
+
+/* AllTransaction */
+
+/* TransactionHistory */
+
+.TransactionHistory{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 10px 50px;
+  gap: 30px;
+}
+
+.History_Date{
+  font-size: 30px;
+}
+
+.History_detail{
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: center; */
+  
+}
+
+.History_desc{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* TransactionHistory */

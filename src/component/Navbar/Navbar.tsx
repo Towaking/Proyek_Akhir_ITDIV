@@ -3,9 +3,9 @@ import React from "react";
 import { Link } from 'react-router-dom';
 
 export function Navbar() {
-  const logo = "images/CinemateLogo.png";
-  const search = "images/Search.png";
-  const location = "images/Location.png"; 
+  const logo = "/images/CinemateLogo.png";
+  const search = "/images/Search.png";
+  const location = "/images/Location.png"; 
 
   return (
     <nav className="navbar">

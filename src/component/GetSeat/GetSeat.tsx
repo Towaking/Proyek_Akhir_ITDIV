@@ -12,8 +12,8 @@ export default function GetSeat(props:any) {
     function isClicked():any{
 
         if(click == false){
-            setbgc("#CDCDCD");
-            settxt("transparent");
+            setbgc("#36F649");
+            settxt("#fff");
             setclick(true);
             props.onClick(props.element);
         }

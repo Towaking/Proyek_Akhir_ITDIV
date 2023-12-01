@@ -7,9 +7,7 @@ import { Link } from 'react-router-dom';
 
 export function Details() {
     const Navigate = useNavigate();
-    const redirect = () => {
-      Navigate('/book');
-    }
+
 
     return (
       <div>
@@ -33,7 +31,7 @@ export function Details() {
                 <div className='score-item'><img src="/images/Rating.png" alt="" /></div>
                 <div className='score-item'>Score (8,7/10)</div>
                 <Link to="/book" style ={{width: 700}}>
-                  <button className='buy-ticket-button' onClick={redirect}>Buy Ticket</button>
+                  <button className='buy-ticket-button' >Buy Ticket</button>
                 </Link>
             </div>
             
