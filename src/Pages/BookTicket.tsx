@@ -3,11 +3,14 @@ import { Navbar } from '../component/Navbar/Navbar';
 import { Footer } from '../component/Footer/Footer';
 import { seat } from '../component/props/CinemaSeats';
 import GetSeat from '../component/GetSeat/GetSeat';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 export function BookTicket() {
   
   const [current,setcurrent] = useState('');
-  const [seats,setseats] = useState('');
+  const [seats,setseats] = useState('-');
+  const Navigate = useNavigate();
   const Seat = seat;
 
   const get_ele = (ele:any) =>{
@@ -20,6 +23,14 @@ export function BookTicket() {
           <GetSeat  element = {element} key={id} onClick={get_ele}/>
         )
     });
+  }
+
+  function button_pay(){
+    if(seats.includes("-")){
+      return false;
+    }else{
+      return true;
+    }
   }
 
   return (
@@ -78,6 +89,11 @@ export function BookTicket() {
             <div className="book_available"><div></div>Available</div>
           </div>
           <div className="book_positions"><div>Positions:</div>{seats || "-"}</div>
+        </div>
+        <div className="book_payment">
+          <Link to="/book/transaction">
+            {button_pay() ? <button  disabled={!button_pay()}>Payment</button> : <br/>}
+          </Link>
         </div>
       </section>
       <Footer/>
