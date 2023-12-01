@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Profile from "../Profile/Profile";
 
 export default function MyProfile() {
-    const [isedit,setisedit] = useState(false);
+    
+
+    function isEdits(check : Number):boolean{
+
+      return true;  
+    }
   return (
     <div className="MyProfile">
       <div className="Profile_identity">
@@ -20,20 +26,14 @@ export default function MyProfile() {
             <span>My Ticket</span>
         </Link>
       </div>
-        <div className="Profile_email">
-            <span>Email Address</span>
-            <div className="Profile_edit">
-                <span contentEditable={isedit}>contohuser@gmail.com  </span>
-                <img src="/images/icon_pencil.png" alt="edit" onClick={()=>isedit==true ? setisedit(false) : setisedit(true)}/>
-            </div>
-        </div>
-        <div className="Profile_phone">
-            <span>Phone Number</span>
-            <div className="Profile_edit">
-                <span contentEditable={isedit}>08932674213 </span>
-                <img src="/images/icon_pencil.png" alt="edit" onClick={()=>isedit==true ? setisedit(()=>false) : setisedit(()=>true)}/>
-            </div>
-        </div>
+        <Profile
+          Title = "Email Address"
+          Desc = "contohuser@gmail.com"
+        />
+        <Profile
+          Title = "Phone Number"
+          Desc = "989232323"
+        />
     </div>
   );
 }

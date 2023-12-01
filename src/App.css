@@ -1003,6 +1003,12 @@ padding-bottom: 20px;
   justify-content: space-between;
 }
 
+.Profile_editable{
+  background-color: white;
+  color: #000;
+  padding: 0 20px;
+}
+
 
 
 /* MyProfile */
@@ -1013,7 +1019,7 @@ padding-bottom: 20px;
 .MyTickets{
   background:linear-gradient(to bottom, hsl(335, 41%, 29%),hsla(334, 59%, 12%) );
   color: white;
-  height: 100vh;
+
 }
 
 .MyTicket_Container{
@@ -1155,3 +1161,51 @@ padding-bottom: 20px;
 
 /* MyTickets */
 
+
+/* AllTransaction */
+
+.AllTransaction{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px;
+}
+
+
+
+.lines{
+  width: 70vw;
+  height: 2px;
+  background-color: #fff;
+}
+
+/* AllTransaction */
+
+/* TransactionHistory */
+
+.TransactionHistory{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 10px 50px;
+  gap: 30px;
+}
+
+.History_Date{
+  font-size: 30px;
+}
+
+.History_detail{
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: center; */
+  
+}
+
+.History_desc{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* TransactionHistory */
