@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react'
-import { Navbar } from '../component/Navbar/Navbar'
+
 import { Footer } from '../component/Footer/Footer'
 import { Sponsor } from '../component/Sponsor/Sponsor'
 import { Hero } from '../component/Hero/Hero'
 import { LandingCaraosel } from '../component/LandingCaraosel/LandingCaraosel'
 import ReactDOM from 'react-dom/client';
 import { Promo } from '../component/Promo/Promo'
+import { Navbar_2 } from '../component/Navbar_2/Navbar_2'
 
 
-export function Landing() {
+export function Member() {
   const [checkValue, setCheckValue] = useState(0);
   const [ViewAll, setViewAll] = useState(false);
 
@@ -108,7 +109,7 @@ export function Landing() {
 
   return (
     <div>
-      <Navbar/>
+      <Navbar_2/>
       <Hero/>
       <section className='landing_main'>
         <div className="landing_main_populer">
@@ -148,4 +149,4 @@ export function Landing() {
   )
 }
 
-export default Landing;
+export default Member;

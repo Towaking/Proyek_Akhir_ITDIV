@@ -2,11 +2,12 @@ import React from 'react';
 import { Navbar } from '../component/Navbar/Navbar';
 import { Footer } from '../component/Footer/Footer';
 import { Link } from 'react-router-dom';
+import { Navbar_2 } from '../component/Navbar_2/Navbar_2';
 
 export function ViewMovies() {
     return (
       <div>
-        <Navbar />
+        <Navbar_2 />
         <div className='movie-container'>
             <p>Top Movie This Week</p>
             <h1>Oppenheimer</h1>

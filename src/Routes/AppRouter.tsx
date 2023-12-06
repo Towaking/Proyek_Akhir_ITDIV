@@ -10,6 +10,8 @@ import BookTicket from '../Pages/BookTicket';
 import Transaction from '../Pages/Transaction';
 import Success from '../component/Success/Success';
 import MyTickets from '../Pages/MyTickets';
+import Failed from '../component/Failed/Failed';
+import Member from '../Pages/Member';
 
 
 const AppRouter: React.FC = () => {
@@ -25,7 +27,10 @@ const AppRouter: React.FC = () => {
         <Route path="/book" element={ <BookTicket /> }/>
         <Route path="/book/transaction" element={ <Transaction /> }/>
         <Route path="/book/success" element={ <Success/> }/>
+        <Route path="/book/failed" element={ <Failed/> }/>
         <Route path="/myticket" element={ <MyTickets/> }/>
+        <Route path="/member" element={ <Member/> }/>
+        
       </Routes>
     </BrowserRouter>
   );

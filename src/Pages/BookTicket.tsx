@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { Navbar } from '../component/Navbar/Navbar';
 import { Footer } from '../component/Footer/Footer';
 import { seat } from '../component/props/CinemaSeats';
 import GetSeat from '../component/GetSeat/GetSeat';
 import { Link, useNavigate } from 'react-router-dom';
+import { Navbar_2 } from '../component/Navbar_2/Navbar_2';
 
 
 export function BookTicket() {
@@ -35,7 +35,7 @@ export function BookTicket() {
 
   return (
     <div className='bookticket'>
-      <Navbar/>
+      <Navbar_2/>
       <section className='book_upper_detail'>
         <div className='book_img'>
           <img src='images/spider.png' alt='spider'/>

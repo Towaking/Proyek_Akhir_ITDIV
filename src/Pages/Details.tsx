@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar } from '../component/Navbar/Navbar';
+import { Navbar_2 } from '../component/Navbar_2/Navbar_2'
 import { Footer } from '../component/Footer/Footer';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -11,7 +11,7 @@ export function Details() {
 
     return (
       <div>
-        <Navbar />
+        <Navbar_2 />
         <div className='detail-container'>
             <div className='detail-image'>
                 <img src="/images/spider.png" alt="" />

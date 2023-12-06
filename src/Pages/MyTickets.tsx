@@ -4,6 +4,7 @@ import { Footer } from "../component/Footer/Footer";
 import Transaction from "./Transaction";
 import MyTicket from "../component/MyTicket/MyTicket";
 import AllTransaction from "../component/AllTransaction/AllTransaction";
+import { Navbar_2 } from "../component/Navbar_2/Navbar_2";
 
 export default function MyTickets() {
     const [isSelected, setIsSelected] = useState(true);
@@ -17,7 +18,7 @@ export default function MyTickets() {
     }
   return (
     <div className="MyTickets">
-      <Navbar />
+      <Navbar_2 />
       <div className="MyTickets_Container">
         <div className="MyTicket_detail">
           <span>MyTicket</span>

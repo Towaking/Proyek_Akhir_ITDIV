@@ -3,6 +3,7 @@ import { Navbar } from "../component/Navbar/Navbar";
 import { Footer } from "../component/Footer/Footer";
 import { Link } from "react-router-dom";
 import MyProfile from "../component/MyProfile/MyProfile";
+import { Navbar_2 } from "../component/Navbar_2/Navbar_2";
 
 export default function Transaction() {
     function random_num():String{
@@ -12,7 +13,7 @@ export default function Transaction() {
     }
     return (
         <div className="Transaction">
-            <Navbar />
+            <Navbar_2 />
             <div className="Transaction_Container">
                 <div className="transaction_summary">
                     <div className="transaction_title">
