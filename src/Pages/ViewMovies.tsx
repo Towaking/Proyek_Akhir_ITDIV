@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Navbar } from '../component/Navbar/Navbar';
 import { Footer } from '../component/Footer/Footer';
 import { Link } from 'react-router-dom';
 import { Navbar_2 } from '../component/Navbar_2/Navbar_2';
+import axios from 'axios';
+import ImageComponent from './ImageComponent';
 
 export function ViewMovies() {
+  const [movies, setMovies] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchMovies = async () => {
+      try {
+        const response = await axios.get('https://localhost:7262/api/Movie/NowShowing');
+        setMovies(response.data);
+      } catch (error) {
+        console.error('Error fetching movies:', error);
+      }
+    };
+
+    fetchMovies();
+  }, []);
+
     return (
       <div>
         <Navbar_2 />
@@ -35,9 +52,12 @@ export function ViewMovies() {
             <div className='now-showing'>
                 <h1>Now Showing</h1>
                 <div className='movies-playing'>
-                <img src="/images/spider.png" alt="gada" />
+                {/* <img src="/images/spider.png" alt="gada" />
                 <img src="/images/Rectangle 18.png" alt="gada" />
-                <img src="/images/oppenheimer.png" alt="gada" />
+                <img src="/images/oppenheimer.png" alt="gada" /> */}
+                {movies.map((movie) => (
+                  <ImageComponent imageBase64={movie.movPoster} />
+                ))}
             </div>
          </div>
         </div>
