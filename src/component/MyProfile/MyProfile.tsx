@@ -1,24 +1,37 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import Profile from "../Profile/Profile";
 
 export default function MyProfile() {
-    
-
+    const name = localStorage.getItem('userName');
+    const email = localStorage.getItem('userEmail');
+    const phone = localStorage.getItem('userPhone');
+    const saldo = localStorage.getItem('userSaldo');
+    const Navigate = useNavigate();
     function isEdits(check : Number):boolean{
 
       return true;  
     }
+    function logout(){
+      localStorage.removeItem('userID');
+      localStorage.removeItem('userEmail');
+      localStorage.removeItem('userPhone');
+      localStorage.removeItem('userName');
+      localStorage.removeItem('userSaldo');
+      localStorage.setItem('isLogin','false');
+      // window.location.reload();
+      Navigate('/signin');
+    }
   return (
     <div className="MyProfile">
       <div className="Profile_identity">
-        <span>contohuser</span>
+        <span>{name}</span>
         <img src="/images/Profile.png" alt="" />
       </div>
       <div className="transaction_total">
         <span>CineCoins: </span>
         <span>
-          54 Cinecoins <img src="/images/CineCoins.png" alt="coin" />
+          {saldo} Cinecoins <img src="/images/CineCoins.png" alt="coin" />
         </span>
       </div>
       <div>
@@ -28,12 +41,13 @@ export default function MyProfile() {
       </div>
         <Profile
           Title = "Email Address"
-          Desc = "contohuser@gmail.com"
+          Desc = {email}
         />
         <Profile
           Title = "Phone Number"
-          Desc = "989232323"
+          Desc = {phone}
         />
+        <button onClick={logout}>Log Out</button>
     </div>
   );
 }
