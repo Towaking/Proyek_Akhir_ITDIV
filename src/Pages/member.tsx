@@ -12,7 +12,9 @@ import { Navbar_2 } from '../component/Navbar_2/Navbar_2'
 export function Member() {
   const [checkValue, setCheckValue] = useState(0);
   const [ViewAll, setViewAll] = useState(false);
-
+  useEffect(() => {
+    console.log(localStorage.getItem('isLogin'))
+  })
     useEffect(()=>{
       setTimeout(() => {
         

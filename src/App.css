@@ -34,6 +34,7 @@
   width: 60rem;
   align-items: center;  
   justify-content: space-between;
+  margin: 0 20px 0 0;
   gap: 60px;
 }
 
@@ -491,10 +492,12 @@ button {
   background-image: url('../public/images/oppenheimerbg.png');
   background-size: cover;
   color: white;
+  
   display: flex;
   flex-direction: column;
   align-items: flex-end; 
   align-content: flex-end;
+  min-height: 400px;
   padding-right: 200px;
   padding-top: 200px;
 }
@@ -706,19 +709,43 @@ padding-bottom: 20px;
 
 .book_upper_detail{
   display: flex;
-  gap: 20px;
-  
+  gap: 40px;
   align-content: center;
   padding: 50px 100px;
 }
+
 .book_detail{
   display: flex;
+  gap: 50px;
   flex-direction: column;
   justify-content: center;
   align-items: start;
 }
 
-.book_details_genre, .book_details_cinema{
+.book_details{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.genres, .details_cinema{
+    flex: 1;
+    width: fit-content;
+    border: 1px solid #fff;
+    padding: 3px 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 20px;
+}
+
+
+.book_details_title{
+  font-size: 30px;
+}
+
+.book_details_cinema{
   display: flex;
   gap: 10px;
 }
@@ -968,6 +995,10 @@ padding-bottom: 20px;
 /* MyProfile */
 
 .MyProfile{
+  position: absolute;
+  z-index: 9;
+  right: 0;
+  top: 0;
   width: 400px;
   padding: 40px 30px;
   border-radius: 20px;
@@ -1041,9 +1072,10 @@ padding-bottom: 20px;
 .MyTicket_History{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   gap: 50px;
+  min-height: 600px;
 }
 
 .MyTicket_HistoryTag{
@@ -1174,7 +1206,7 @@ padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 50px;
+  padding: 0 50px;
 }
 
 

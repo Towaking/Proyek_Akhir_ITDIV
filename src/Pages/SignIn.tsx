@@ -43,7 +43,7 @@ export function SignIn() {
           localStorage.setItem('userPhone', response.data.userPhone);
           localStorage.setItem('userSaldo', response.data.userSaldo);
           alert("Proses sign in berhasil");
-          navigate('/member');
+          navigate('/');
         } else {
           alert("Username atau password salah");
         }
