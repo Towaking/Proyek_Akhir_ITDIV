@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Footer } from '../component/Footer/Footer';
 import { seat } from '../component/props/CinemaSeats';
 import GetSeat from '../component/GetSeat/GetSeat';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Navbar_2 } from '../component/Navbar_2/Navbar_2';
 
 
@@ -10,9 +10,12 @@ export function BookTicket() {
   
   const [current,setcurrent] = useState('');
   const [seats,setseats] = useState('-');
+  const [selectCinema,setselectCinema] = useState<string>();
+  const [selectschedule,setselectschedule] = useState<string>();
   const Navigate = useNavigate();
   const Seat = seat;
-
+  const location = useLocation();
+  const data  = location.state;
   const get_ele = (ele:any) =>{
     setseats(ele);
   }
@@ -24,6 +27,9 @@ export function BookTicket() {
         )
     });
   }
+  console.log(selectCinema)
+  console.log(selectschedule)
+  console.log(seats)
 
   function button_pay(){
     if(seats.includes("-")){
@@ -38,17 +44,15 @@ export function BookTicket() {
       <Navbar_2/>
       <section className='book_upper_detail'>
         <div className='book_img'>
-          <img src='images/spider.png' alt='spider'/>
+          <img src={`data:image/png;base64,${data.movPoster}`} alt='spider'/>
         </div>
         <div className="book_detail">
           <div className="book_details">
             <div className="book_details_title">
-              <span>Spiderman : Across The Spider Verse</span>
+              <span>{data.movName}</span>
             </div>
             <div className="book_details_genre">
-              <div className="genres">Animation</div>
-              <div className="genres">Action</div>
-              <div className="genres">Adventure</div>
+              <div className="genres">{data.movGenre}</div>
             </div>
             <div className="book_details_cinema">
               <div className="details_cinema" id='XXI'>XXI</div>
@@ -60,18 +64,18 @@ export function BookTicket() {
           <div className="book_schedule">
             <div className="book_schedule_cinema">
                 <span>Choose Cinema</span>
-                <select name="" id="">
-                  <option value="" disabled selected hidden>Select the cinema you want to go to</option>
-                  <option value="">Plaza Indonesia XXI</option>
-                  <option value="">XXI</option>
+                <select value={selectCinema} onChange={e=>setselectCinema(e.target.value)}>
+                  <option disabled selected hidden>Select the cinema you want to go to</option>
+                  <option >Plaza Indonesia XXI</option>
+                  <option >XXI</option>
                 </select>
             </div>
             <div className="book_schedule_cinema">
                 <span>Choose Schedule</span>
-                <select name="" id="">
-                  <option value="" disabled selected hidden>Select the cinema showtime Schedule</option>
-                  <option value="">12:40</option>
-                  <option value="">14:00</option>
+                <select value={selectschedule} onChange={e=>setselectschedule(e.target.value)}>
+                  <option  disabled selected hidden>Select the cinema showtime Schedule</option>
+                  <option >12:40</option>
+                  <option >14:00</option>
                 </select>
             </div>
           </div>
@@ -91,7 +95,7 @@ export function BookTicket() {
           <div className="book_positions"><div>Positions:</div>{seats || "-"}</div>
         </div>
         <div className="book_payment">
-          <Link to="/book/transaction">
+          <Link to="/book/transaction" state={{data, seats ,selectCinema,selectschedule}}>
             {button_pay() ? <button  disabled={!button_pay()}>Payment</button> : <br/>}
           </Link>
         </div>

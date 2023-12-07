@@ -9,7 +9,7 @@ export function Navbar() {
 
   return (
     <nav className="navbar">
-        <Link to="/">
+        <Link to="/signin">
           <div className="navbar_logo">
             <img src={logo} alt="image" />
           </div>

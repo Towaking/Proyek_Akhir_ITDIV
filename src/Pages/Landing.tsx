@@ -4,20 +4,21 @@ import { Footer } from '../component/Footer/Footer'
 import { Sponsor } from '../component/Sponsor/Sponsor'
 import { Hero } from '../component/Hero/Hero'
 import { LandingCaraosel } from '../component/LandingCaraosel/LandingCaraosel'
-import ReactDOM from 'react-dom/client';
 import { Promo } from '../component/Promo/Promo'
+import { Navbar_2 } from '../component/Navbar_2/Navbar_2'
 
 
 export function Landing() {
   const [checkValue, setCheckValue] = useState(0);
   const [ViewAll, setViewAll] = useState(false);
+  const [islogin,setislogin] = useState(
+    localStorage.getItem('isLogin') );
 
     useEffect(()=>{
       setTimeout(() => {
-        
         onChangeAttributes(()=>(checkValue+1)%3);
       }, 5000);
-    })
+    },[])
 
   const detail = 
   [
@@ -108,7 +109,7 @@ export function Landing() {
 
   return (
     <div>
-      <Navbar/>
+      {islogin ? <Navbar_2/> : <Navbar/>}
       <Hero/>
       <section className='landing_main'>
         <div className="landing_main_populer">

@@ -1,8 +1,10 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { Link } from 'react-router-dom';
+import MyProfile from "../MyProfile/MyProfile";
 
 export function Navbar_2() {
+  const [open,setopen] = useState(false);
   const logo = "/images/CinemateLogo.png";
   const search = "/images/Search.png";
   const location = "/images/Location.png";
@@ -10,7 +12,7 @@ export function Navbar_2() {
 
   return (
     <nav className="navbar">
-        <Link to="/">
+        <Link to="/member">
           <div className="navbar_logo">
             <img src={logo} alt="image" />
           </div>
@@ -30,11 +32,9 @@ export function Navbar_2() {
                     <option value="">LOL</option>
                 </select>
             </div>
-            <Link to="/signin">
-              <div className="navbar_2_profile">
-                  <img src="/images/Profile.png" alt="" />
+              <div className="navbar_2_profile" onClick={()=>setopen(()=>!open)} >
+                { open ?  <MyProfile/> : <img src="/images/Profile.png" alt="" /> }
               </div>
-            </Link>
         </div>
     </nav>
   );

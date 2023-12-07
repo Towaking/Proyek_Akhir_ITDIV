@@ -5,10 +5,12 @@ import { Link } from 'react-router-dom';
 import { Navbar_2 } from '../component/Navbar_2/Navbar_2';
 import axios from 'axios';
 import ImageComponent from './ImageComponent';
+import TopMovie from '../component/TopMovie/TopMovie';
+import { seat } from '../component/props/CinemaSeats';
 
 export function ViewMovies() {
   const [movies, setMovies] = useState<any[]>([]);
-
+  const [PopularMovies, setPopularMovies] = useState<any[]>([]); 
   useEffect(() => {
     const fetchMovies = async () => {
       try {
@@ -18,36 +20,28 @@ export function ViewMovies() {
         console.error('Error fetching movies:', error);
       }
     };
+    const fetchPopularMovies = async () => {
+      try {
+        const response = await axios.get('https://localhost:7262/api/Movie/PopularMovie');
+        setPopularMovies(response.data);
+        console.log(response.data);
+      } catch (error) {
+        console.error('Error fetching movies:', error);
+      }
+    };
 
     fetchMovies();
+    fetchPopularMovies();
   }, []);
 
     return (
       <div>
         <Navbar_2 />
-        <div className='movie-container'>
-            <p>Top Movie This Week</p>
-            <h1>Oppenheimer</h1>
-            <div className='category'>
-                <div className='category-item'>History</div>
-                <div className='category-item'>Drama</div>
-                <div className='category-item'>Biography</div>
-            </div>
-            <div className='score'>
-                <div className='score-item'><img src="/images/Rating.png" alt="" /></div>
-                <div className='score-item'>Score (8,5/10)</div>
-            </div>
-            <div className='desc'>
-                The story of American scientist, J. Robert Oppenheimer, and
-                 his role in the development of the atomic bomb.
-            </div>
-            <div className='btn'>
-            <Link to="/Details">
-                <button className='view-button'>View Detail</button>
-             </Link>
-            </div>
-            
-        </div>
+        {PopularMovies.map((popularMovies) =>{
+          return(
+            <TopMovie data={popularMovies}/>
+          )
+        })}
         <div className='movies-container'>
             <div className='now-showing'>
                 <h1>Now Showing</h1>
