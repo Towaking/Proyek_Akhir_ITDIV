@@ -1,6 +1,6 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project Description
+This project is about a Cinema apps that allow us to book a seat from many studio to watch the movie we choose.
+This project consist of 5 people, i'm the lead programmer that lead this project
 
 ## Available Scripts
 
